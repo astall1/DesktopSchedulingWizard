@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="310.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.ReportConsultantController">
+   <children>
+      <Label layoutX="313.0" layoutY="34.0" prefHeight="51.0" prefWidth="155.0" text="Consultant Report" underline="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="consultCbox" layoutX="24.0" layoutY="96.0" onAction="#RetrieveSchedule" prefWidth="150.0" promptText="Select Consultant" />
+      <TableView fx:id="ConsultTable" layoutX="21.0" layoutY="136.0" prefHeight="117.0" prefWidth="738.0">
+        <columns>
+          <TableColumn fx:id="ConsultTableCustomer" prefWidth="133.0" text="Customer" />
+          <TableColumn fx:id="ConsultTableTitle" prefWidth="172.0" text="Title" />
+            <TableColumn fx:id="ConsultTableDate" prefWidth="99.0" text="Date" />
+            <TableColumn fx:id="ConsultTableStart" prefWidth="72.0" text="Start" />
+            <TableColumn fx:id="ConsultTableEnd" prefWidth="81.0" text="End" />
+            <TableColumn fx:id="ConsultTableLoc" prefWidth="180.0" text="Location" />
+        </columns>
+      </TableView>
+      <Button layoutX="645.0" layoutY="274.0" mnemonicParsing="false" onAction="#BackToReportScreen" prefHeight="25.0" prefWidth="82.0" text="Back" />
+      <Label layoutX="21.0" layoutY="276.0" text="Entries Total">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="ShowRecords" layoutX="128.0" layoutY="276.0" prefHeight="17.0" prefWidth="23.0" text="0" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

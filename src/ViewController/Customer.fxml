@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" fx:id="customerPane" prefHeight="415.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.CustomerController">
+     <children>
+      <Button layoutX="596.0" layoutY="55.0" mnemonicParsing="false" onAction="#NewCustomer" text="New Customer" />
+      <GridPane layoutX="507.0" layoutY="93.0" prefHeight="261.0" prefWidth="208.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="68.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="132.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Name:" />
+            <Label text="Address:" GridPane.rowIndex="1" />
+            <Label text="Address 2:" GridPane.rowIndex="2" />
+            <Label text="City:" GridPane.rowIndex="4" />
+            <Label text="Postal:" GridPane.rowIndex="3" />
+            <Label text="Country" GridPane.rowIndex="5" />
+            <Label text="Phone:" GridPane.rowIndex="6" />
+            <Label text="Active:" GridPane.rowIndex="7" />
+            <TextField fx:id="customerName" GridPane.columnIndex="1" />
+            <TextField fx:id="customerAddress" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="customerAddress2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="customerPostal" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="customerCity" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="customerCountry" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="customerPhone" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <CheckBox fx:id="customerActive" mnemonicParsing="false" selected="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <Button layoutX="671.0" layoutY="375.0" mnemonicParsing="false" onAction="#SaveCustomer" prefHeight="25.0" prefWidth="52.0" text="Save" />
+      <Button layoutX="604.0" layoutY="375.0" mnemonicParsing="false" onAction="#CancelCustomer" text="Cancel" />
+      <TextField fx:id="customerSearch" layoutX="14.0" layoutY="42.0" />
+      <Button layoutX="177.0" layoutY="42.0" mnemonicParsing="false" onAction="#SearchCustomer" text="Search" />
+      <TableView fx:id="customerTable" layoutX="14.0" layoutY="77.0" prefHeight="293.0" prefWidth="451.0">
+        <columns>
+            <TableColumn fx:id="customerTableId" prefWidth="29.0" text="ID" />
+          <TableColumn fx:id="customerTableName" prefWidth="140.0" text="Name" />
+          <TableColumn fx:id="customerTableAddress" minWidth="9.0" prefWidth="192.0" text="Address" />
+            <TableColumn fx:id="customerTableActive" prefWidth="113.0" text="Active" />
+        </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="375.0" mnemonicParsing="false" onAction="#EditCustomer" prefHeight="25.0" prefWidth="68.0" text="Edit " />
+      <Button layoutX="537.0" layoutY="375.0" mnemonicParsing="false" onAction="#RevertMain" prefHeight="25.0" prefWidth="52.0" text="Back" />
+      <TextField fx:id="customerId" layoutX="101.0" layoutY="54.0" prefHeight="25.0" prefWidth="55.0" visible="false" />
+      <TextField fx:id="addressId" layoutX="111.0" layoutY="64.0" prefHeight="25.0" prefWidth="55.0" visible="false" />
+      <Label layoutX="313.0" layoutY="14.0" text="CUSTOMERS" underline="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textCustField" layoutX="256.0" layoutY="43.0" visible="false" />
+      <Button fx:id="handleDelCustomer" layoutX="114.0" layoutY="375.0" mnemonicParsing="false" onAction="#handleDeleteCustomer" prefHeight="25.0" prefWidth="68.0" text="Remove" />
+   </children>
+</AnchorPane>

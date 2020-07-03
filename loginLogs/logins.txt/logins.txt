@@ -1,0 +1,8 @@
+2019-06-03T18:57:53.554: tester logged in
+2019-06-03T18:57:54.065: attempted login for user 'test'
+2019-06-03T19:02:31.157: tester logged in
+2019-06-03T19:02:31.684: attempted login for user 'test'
+2019-06-03T19:07:04.556: tester logged in
+2019-06-03T19:07:05.090: attempted login for user 'test'
+2019-06-03T19:08:18.132: tester logged in
+2019-06-03T19:08:18.679: attempted login for user 'test'
